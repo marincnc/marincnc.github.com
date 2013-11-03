@@ -1,0 +1,37 @@
+/*	SPRY ACCORDION CSS
+$Id $
+@author mok
+*/
+/* Based on SpryAccordion.css - version 0.4 - Spry Pre-Release 1.6 */
+.Accordion {
+overflow: hidden;
+-moz-outline: none;
+outline: none;
+border: none;
+}
+.AccordionPanel {
+margin: 0px;
+padding: 0px;
+}
+.AccordionPanelTab {
+background-color: #343434;
+color:#fff;
+font-size: 0.917em;
+padding: 0.4em 8px;
+margin: 0 0 1px;
+cursor: pointer;
+-moz-user-select: none;
+-khtml-user-select: none;
+}
+.AccordionPanelContent {
+overflow: hidden;
+margin: 0px;
+padding: 0 0 0 8px;
+}
+.AccordionPanelContent ul { margin-top: 8px;  }
+.AccordionPanelContent p { margin-bottom: 0; }
+.AccordionPanelContent .call-action { 
+text-align: right;
+font-size: 0.917em;
+font-weight: bold;
+ }

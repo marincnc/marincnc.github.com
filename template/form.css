@@ -1,0 +1,204 @@
+/*	FORM $Revision: 1.21.2.1 $
+@author btapley
+*/
+/*	LAYOUT
+*/
+.formBlock {
+padding-top: 12px;
+padding-bottom: 12px;
+margin-top: 0;
+margin-bottom: 0;
+}
+.inputBlock {
+margin-top: 0;
+margin-bottom: 0;
+}
+.inputBlock p {
+margin-bottom: 6px;
+}
+.inputBlock dt {
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 6px;
+}
+.inputBlock dd {
+margin-left: 0;
+margin-bottom: 6px;
+}
+.inputBlock .inputGroup {
+margin-left: 0;
+}
+.inputGroup {
+list-style-type: none;
+padding-left: 0;
+margin-top: 0;
+margin-bottom: 6px;
+}
+.inputGroup li {
+margin-bottom: 0;
+padding-bottom: 0; /*override default glue*/
+padding-right: 1ex; /* Mac IE freaks on margin-right, use padding instead */
+}
+.inputGroup .left {
+font-weight: normal;
+}
+.inputGroup .caption {
+margin-top: .25em;
+margin-bottom: 0;
+}
+.buttonBlock {
+display:block;
+}
+div.buttonBlock {
+margin-top: 2em;
+margin-bottom: 0;
+}
+span.buttonBlock {
+margin-top: 1em;
+}
+/*	BASE
+*/
+input,
+button,
+select {
+/*\*/ vertical-align: middle; /**/
+}
+label.top {
+display: block;
+margin-bottom: 6px;
+font-weight: bold;
+}
+label.left {
+display: inline-block;
+_height: 1em;
+margin-right: 1ex;
+vertical-align: middle;
+font-weight: bold;
+}
+form {
+margin: 0 0 1em;
+padding: 0;
+font-size: 100%; 
+font-family: inherit;
+}
+.disabled {
+filter: alpha(opacity=50);
+-moz-opacity: 0.5;
+-khtml-opacity: 0.5;
+opacity: 0.5;
+zoom: 100%;
+_height: 1em;
+}
+.required {
+color: #C00;
+}
+.button {
+font-weight: bold;
+font-family: inherit;
+text-align: center;
+color: #2b333c;
+background: #fefefe url(form/element_bg.gif) repeat-x;
+border: 1px solid;
+border-color: #c4cccc #acb5b5 #6f7777 #acb5b5;
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#AAAAAA);
+box-shadow: 0 1px 2px #AAA;
+padding: .2em 1.5ex;
+_padding: .2em 2ex;
+_width/**/:1px;
+_white-space: nowrap;
+overflow: visible; /* fix button width for IE 5.5 to 7 */
+cursor: pointer;
+_cursor: hand;
+}
+.button {
+_margin-left: expression(this.previousSibling ? '1ex' : 'null');
+}
+*+.button {
+margin-left: 1ex;
+}
+/* \*/
+::root input.button {
+font-size: inherit;
+}
+/* */
+.inputBlock .caption {
+display: block;	
+margin-top: .2em;
+}
+input,
+select,
+textarea,
+button {
+font-family: inherit;
+font-size: 100%;
+line-height: 1.35;
+}
+select.max {
+width: 100%;
+/* make the select horizonally expand so you can read it when focused */
+behavior: url(../../../../lib/com.adobe/remedy/revealOverflowX.htc);
+_behavior: url(../../../../lib/com.adobe/remedy/revealOverflowX.htc) url(../../../../lib/com.adobe/remedy/maxCalcFix.htc); 
+}
+input.max,
+textarea.max {
+-moz-box-sizing: border-box;
+width: 100%;
+/* fix broken width caclation in IE 6 and below */
+_behavior: url(../../../../lib/com.adobe/remedy/maxCalcFix.htc);
+}
+/*\*/*:first-child+html/**/ textarea.max,
+/*\*/*:first-child+html/**/ input.max {
+width: 97%;
+}
+.textfield {
+_height: 1.85em;
+}
+.textfield,
+textarea,
+select[size] {
+padding-top: 2px;
+padding-bottom: 3px;
+background-color: #f7f7f7;
+border-width: thin;
+border-style: solid;
+border-color: #999 #aab3b3 #d5dddd #aab3b3;
+}
+select {
+line-height: 1.35;
+background-color: #fefefe;
+border-width: thin;
+border-style: solid;
+border-color: #c4cccc #acb5b5 #6f7777 #acb5b5;
+min-height: 1.8em;
+}
+select[size] {
+background-color: #fff !important
+}
+/*	STATES
+*/
+.textfield:hover,
+.textfield:focus,
+select[size]:hover,
+select[size]:focus,
+textarea:hover,
+textarea:focus {
+border-color: #459455 #5b5 #6d5 #5b5;
+}
+select:hover,
+select:focus {
+border-color: #6d5 #5b5 #459455 #5b5;
+}
+.textfield:focus,
+select:focus,
+textarea:focus,
+.button:hover {
+background-color: #FFF;
+outline: #D6FFC9 solid 1px;
+}
+.button:hover {
+outline-width: 2px;
+}
+::root .button>* {
+position: relative; /* Safari 2 throws outlines around everything inside button. Newer Webkits address this bug. For now, this puts the button text on top of all the outlines. */
+}

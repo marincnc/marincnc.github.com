@@ -1,0 +1,5 @@
+# marincnc robots.txt
+User-agent: *
+Allow: /
+
+sitemap: http://cdn.attracta.com/sitemap/476935.xml.gz

@@ -1,0 +1,5 @@
+AuthUserFile /hsphere/local/home/c330798/.statspasswd
+AuthGroupFile /dev/null
+AuthName EnterPassword
+AuthType Basic
+require user c330798

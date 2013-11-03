@@ -1,0 +1,251 @@
+/*	GLOBAL NAV
+$Id: gnav.css,v 1.31.4.7 2007/12/10 23:27:07 btapley Exp $
+@author btapley
+*/
+#globalnav-search {
+margin: 0;
+padding: 0;
+}
+#globalnav {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index:100;
+	display: block;
+	_height: 1em;
+	padding: 0 1px 1px 1px;
+	margin: 0;
+	overflow: visible;
+}
+#globalnav-noscript {
+position: absolute;
+left: 50%;
+top: 0;
+margin-left: -331px;
+width: 350px;
+z-index: 100;
+padding: 5px 5px 5px 27px;
+display: none; 
+font-size: .917em;
+}
+#globalnav #adobe-logo {
+position: absolute;
+top: 8px;
+left: 100%;
+z-index: 3;
+margin:0;
+padding:0;
+margin-left: -37px;
+/*background-color: #FFFFFF;*/
+background-image: url(gnav/adobe.png);
+background-repeat: no-repeat;
+overflow: hidden;
+}
+#adobe-logo,
+#adobe-logo a {
+width:28px;
+height:35px;
+}
+#adobe-logo a {
+padding-left: 50px;
+display:block;
+background-color: transparent;
+}
+#globalnav-cart .cart {
+background-image: url(gnav/cart_dark.gif);
+background-position: center 0;
+display: inline; 
+display: inline-block; 
+display: -moz-inline-box; 
+_display: inline; 
+color: transparent;
+height: 11px;
+min-height: 11px;
+}
+#globalnav-cart > a.cart {
+display: block;
+}
+#globalnav-cart .cart:hover {
+background-position: center -11px;
+color: transparent;
+}
+#globalnav #user-menu {
+position: relative;
+top: 0;
+left: 0;
+padding: 0;
+margin: 0;
+font-size: .917em;
+}
+#user-menu ul {
+color:#000;
+margin: 0;
+padding: 0;
+padding-top: 5px;
+}
+#user-menu li {
+padding: 3px 10px;
+}
+#user-menu a {
+color:#000;
+font-weight: bold;
+-moz-opacity:.5;
+-khtml-opacity:.5;
+opacity: .5;
+_font-weight: normal;
+padding: 0;
+display: inline;
+}
+#user-menu a:hover {
+-moz-opacity:1;
+-khtml-opacity:1;
+opacity: 100%;
+color:#047;
+text-decoration: underline;
+}
+#user-menu [className~=pipe] a { font-weight: normal }
+#site-menu { 
+position: relative;
+z-index: 2;
+padding: 0;
+padding-top: 3px;
+margin: 0;
+width: 100%;
+}
+#globalnav #site-menu-dropdown {
+margin: 0;
+padding: 0;
+position:relative;
+display:block;
+z-index: 3;
+_behavior: url(../../../../lib/com.adobe/hover.htc);
+}
+#site-menu-dropdown li {
+position:relative;
+z-index: 4;
+margin: 0;
+padding:0;
+}
+#site-menu-dropdown li:hover,
+#site-menu-dropdown li.hover { z-index: 5; }
+#site-menu-dropdown .dropdown-tab {
+	position:relative;
+	z-index: 6;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 4px 10px;
+}
+#site-menu-dropdown > li:hover .dropdown-tab { 
+color: #FFFFFF;
+background-color: #222222;
+}
+#site-menu li.hover .dropdown-tab,
+#site-menu li.hover .dropdown-tab:hover { color: #FFFFFF; }
+#site-menu li.hover .dropdown-tab { background-color: #222222; }
+#site-menu li .dropdown-pane {
+display: none;
+}
+#site-menu-dropdown>li:hover .dropdown-pane {
+display: block;
+}
+#site-menu li.hover .dropdown-pane {
+display: block;
+}
+#site-menu-dropdown .dropdown-pane {
+z-index: 7; 
+top: 18px;
+_top: 18px; 
+margin-left: -6px;
+font-size: .917em;
+}
+#globalnav #site-menu-dropdown .dropdown-pane {
+margin-top: 12px;
+padding: 5px 16px 14px;
+_margin-top: 0;
+width: 140px;
+_width: 170px;
+background-image: url(gnav/dropdown_pane.png);
+_background-image: url(gnav/dropdown_pane_8bit.png);
+background-position: left bottom;
+background-repeat: no-repeat;
+border-top-style: none;
+}
+#globalnav #site-menu-dropdown [className~=dropdown-pane] {
+margin-top: 4px;
+padding-top: 8px;
+}
+#site-menu-dropdown .dropdown-pane::before {
+display: block;
+margin-left: -16px;
+margin-top: -18px;
+content: url(gnav/dropdown_pane_cap.png);
+}
+#site-menu-dropdown .dropdown-pane li,
+#site-menu-dropdown .dropdown-pane dt,
+#site-menu-dropdown .dropdown-pane dd {
+display: block;
+padding: 0;
+margin: 2px 0 6px;
+}
+#site-menu-dropdown .dropdown-pane dt { 
+text-transform: uppercase;
+color:#000000;
+}
+#site-menu-dropdown .dropdown-pane .divide {
+padding-top: 8px;
+}
+#site-menu-dropdown .dropdown-pane .last-title {
+font-weight: normal;
+text-transform: none;
+}
+#site-menu-dropdown .dropdown-pane a {
+display:block;
+_width: 100%;
+margin: 0;
+padding: 0;
+line-height: 14px;
+color:#333;
+}
+#site-menu-dropdown .dropdown-pane a:hover {
+color:#047;
+text-decoration: underline;
+}
+#globalnav #site-search { 
+position: absolute;
+top: 0;
+left: 100%;
+z-index: 1;
+padding: 0;
+margin: 0 0 0 -258px;
+width: 258px;
+height: 61px;
+background-image: url(gnav/search_box.png);
+_background-image: url(gnav/search_box_8bit.png);
+background-position: bottom right;
+background-repeat: no-repeat;
+}
+#search-input { 
+margin-left: 16px;
+margin-top: 15px;
+width: 180px;
+padding-left: .5ex;
+background-color: transparent;
+border: 1px solid #CCCCCC;
+float: left; 
+}
+#search-input:focus,
+#search-input:hover {
+border-color: #000000;
+}
+#site-search button {
+border-style: none;
+background-color: transparent;
+margin-top: 0;
+margin-bottom: 0;
+width: 0;
+height: 0;
+overflow: hidden;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif; 
+}

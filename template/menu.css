@@ -1,0 +1,302 @@
+
+/*	MENU CSS $Revision: 1.23.6.2 $
+*/
+.menu {
+display: block;
+margin-left: 0;
+margin-right: 0;
+margin-bottom: 1em;
+zoom: 1;
+_height: 1em;
+}
+.menu {
+word-spacing: -1ex;
+letter-spacing: -1ex;
+line-height: 0;
+}
+.menu * {
+word-spacing: normal;
+letter-spacing: normal;
+line-height: 1.25;
+}
+.menu>*,
+.menu>* a {
+display: inline;
+display: inline-block;
+display: -moz-inline-box;
+zoom: 1;
+}
+ 
+[className~=menu]>*, 
+[className~=menu]>* a {
+ display: inline; 
+}
+.menu li,
+.menu dt,
+.menu dd,
+.menu li a,
+.menu dd a,
+.menu dt a {
+_display: inline;
+_zoom: 1;
+}
+.menu * li,
+.menu * dd,
+.menu * dt,
+.menu * li a,
+.menu * dd a,
+.menu * dt a { _display: inline-block; }
+.menu li,
+.menu dd,
+.menu dt {
+padding-bottom: 0; /* unfortunately <LI> is globally redefined to have padding bottom. I need to override that here */
+_display: inline;
+}
+.menu li a,
+.menu dd a,
+.menu dt a { vertical-align: /*\*/ bottom /*/ baseline /**/; }
+.menu .selected {
+padding: .1em 0.8ex;
+margin-left: 0;
+}
+.menu .first { padding-left: 0; }
+.boxed {
+background: #ebebeb url(menu/boxshadow.gif) repeat-x bottom left;
+border-top: 1px solid #b1b1b1;
+margin: 0 -16px 0 -16px;
+padding: 0 0 4px;
+position: relative;
+list-style-type: none;
+_zoom: 1;
+}
+.boxed li {
+background-color: #efefef;
+border-left: 1px solid #fff;
+border-right: 1px solid #b1b1b1;
+}
+.boxed li a,
+.boxed dd,
+.boxed dt {
+padding: 6px 16px;
+color: #000;
+}
+.boxed li a:hover {
+background-color: #def;
+color: #000;
+text-decoration: none;
+}
+.boxed li.on { background-color: #f9f9f9; }
+.boxed li a:visited { color: #000; }
+dl.boxed {
+background-image: none;
+border-top: none;
+border-bottom: 1px solid #b1b1b1;
+padding-bottom: 1px;
+margin: 0 -8px 1em;
+}
+.boxed dd,
+.boxed dt {
+padding: 2px 6px 1px 8px;
+margin-top: 0;
+margin-bottom: 0;
+}
+.boxed dt {
+_display: inline;
+_float: left
+}
+.boxed dd {
+float: right !important;
+}
+.page {
+text-align: right;
+margin: 0 0 1em;
+padding: 0;
+}
+.page ul {
+list-style-type: none;
+margin: 0 0 0 10px;
+padding: 0;
+}
+.page ul li a { padding: .1em 0.7ex; }
+.page dt,
+.page dd {
+font-size: 0.917em;
+text-align: left;
+line-height: 1.36;
+margin: 0;
+padding: 0;
+vertical-align: middle;
+}
+.page .button {
+padding: .2ex 1ex .3ex;
+margin-left: 2px;
+margin-right: 2px;
+background-repeat: repeat-y;
+background-position: 0 0;
+}
+.page .pipe .selected {
+font-weight: bold;
+}
+.page dd.next {
+background-image: url(menu/next_null.gif);
+margin-left: -1px;
+}
+.page dd.prev {
+margin-left: 10px;
+background-image: url(menu/prev_null.gif);
+}
+.page dd.next a { background-image: url(menu/next.gif); }
+.page dd.prev a { background-image: url(menu/prev.gif); }
+.page .prev a,
+.page .prev,
+.page .next a,
+.page .next {
+width: 17px;
+height: 17px;
+background-repeat: no-repeat;
+background-position: 0 0;
+/*\*/ overflow: hidden; /**/
+word-spacing: -3ex;
+letter-spacing: -3ex;
+}
+.page .prev,
+.page .next { font-size: 0; margin-left: 2px; margin-right: 2px;  }
+.page dd.prev a:hover,
+.page dd.prev a:focus {
+background-color: transparent;
+background-image: url(menu/prev_hover.gif);
+}
+.page dd.next a:hover,
+.page dd.next a:focus {
+background-color: transparent;
+background-image: url(menu/next_hover.gif);
+}
+.button[class~=selected] { 
+color: #000; 
+background-image: url(form/element_selected_bg.gif);
+cursor: default;
+margin-top: -1px;
+padding-bottom: 0.25em;
+padding-right: 1.7exem
+}
+.button.selected { 
+background-image: url(form/element_selected_bg.gif); 
+background-color: #eee; 
+}
+.page .etc { vertical-align: bottom; }
+.page .selected:hover,
+.page .selected a:hover { outline: none; }
+ol.path { list-style-type: none; }
+.path::after {
+content:"\0020";
+clear: both;
+display: block;
+height:0;
+}
+.path>li {
+display: inline;
+float: left;
+_float: none;
+}
+[className~=path]>li {
+float: none;
+}
+.path>li::after {
+content: "/";
+color: #AAA;
+font-weight: normal;
+margin-right: 1ex;
+}
+ol.path li a {
+htc-method: "$addTextToNode[ /,after,fontWeight normal]"; 
+behavior:url(../../../../lib/com.adobe/evaluateCss.htc);
+}
+.path li a { padding: 0.1em 1ex .1em 0; }
+/*	PIPE
+@author btapley
+*/
+ul.pipe { list-style-type: none; }
+.pipe>li+li {
+background-image: url(theme/pipe.gif);
+padding-left: 1px;
+}
+.pipe li {
+background-repeat: no-repeat;
+background-position: left center;
+}
+.pipe li a {
+padding: 0.1em 1ex;
+vertical-align: baseline; /* mostly for Opera */
+}
+ul.pipe {
+htc-method: "$getDirectChild >$getAdjacent >$addClassToNode[pipe-adjacent]"; 
+_behavior: url(../../../../lib/com.adobe/evaluateCss.htc); }
+.pipe-adjacent {
+background-image: url(theme/pipe.gif);
+padding-left: 1px;
+}
+/* 	COMMA
+@author mok	
+*/
+html:not([lang*=""])*.comma>li:after { /* Netscape 6 - 7 */
+content: ",";
+margin-right: 1ex;
+}
+.comma  li+li:after, 
+.comma  dd:after {
+content: ",";
+margin-right: 1ex;
+}
+.comma dd:last-child:after,
+.comma li:last-child:after { content: "";  }
+.comma li+li { margin-right: 0 }
+.comma dt,
+.comma dd {	margin: 0; }
+.comma dd,
+.comma li { display: inline;  }
+.comma dt { margin-right: 1em; _float: left; }
+.comma a:hover { _color: #cc0000 !important; }
+.comma li a,
+.comma dd a  {
+htc-method: "$addTextToNode[\u201a ,after]"; 
+behavior: url(../../../../lib/com.adobe/evaluateCss.htc);
+_padding-right: 0.5ex;
+_zoom: 0;
+}
+*:first-child+html .comma li a,
+*:first-child+html .comma dd a  {
+htc-method: "$addTextToNode[\\u201a ,after]"; 
+padding-right: 0.5ex;
+}
+.comma  {
+/* compensate for last comma (remove it with margin) */
+htc-method: "$getLastChild >$getDirectChild >$addStyleToNode[marginRight -1.5ex,runtime]"; 
+behavior: url(../../../../lib/com.adobe/evaluateCss.htc);
+}
+/* DASH */
+.dash  {
+padding-left: 0;
+margin-top: 0;
+}
+html:not([lang*=""])*.dash>li:after { /* Netscape 6 - 7 */
+content: "-";
+margin-right: 1ex;
+}
+body:-moz-last-node .dash li,
+body:-moz-last-node .dash dd {display: inline; }
+.dash dt { margin-bottom: 0; _margin-right: 0.5ex; }
+.dash dd { padding: 0; margin: 0; }
+.dash  li+li:before, 
+.dash  dd:before {
+content: "-";	
+margin-left: 1ex;
+padding-right: 1ex;
+}
+.dash {
+htc-method: "$getDirectChild >$getAdjacent >$addTextToNode[-  ,before]"; 
+behavior: url(../../../../lib/com.adobe/evaluateCss.htc);
+}
+.dash li{ _padding-left:0ex ; _padding-right:1ex; }
+.dash dd { _padding-left:0.5ex ; _padding-right:0 }
+*:first-child+html .dash li { padding-left: 0; padding-right: 1ex; }
+*:first-child+html .dash dd { padding-left: 0.75ex; padding-right: 0; }

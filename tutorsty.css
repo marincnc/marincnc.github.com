@@ -1,0 +1,7 @@
+#mycustomscroll {
+	/* Typical fixed height and fixed width example */
+	width: 830px;
+	height: 525px;
+	/* IE overflow fix, position must be relative or absolute*/
+	position: relative;
+}
